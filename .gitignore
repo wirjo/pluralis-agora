@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code settings
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# Python egg
+*.egg-info
+
+# retype
+.retype
+retype.manifest
+
+# Keys and secrets
+*.pem
+private_gpu*.key
+
+# Logs
+logs/
+agora_output_gpu*.log
+
+# Config (contains HF tokens)
+.agora/
+
+# Tool state
+.omc/
