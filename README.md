@@ -58,7 +58,7 @@ See [Environment Variables](#environment-variables) for configuration options.
 - **OS**: Linux or Windows WSL2
 - **Auth**: [HuggingFace token](https://huggingface.co/settings/tokens) (no permissions needed)
 
-> **Note**: Datacenter GPUs like NVIDIA L4 and A10G are currently **not** in Pluralis's allowlist. Consumer GPUs (RTX 4090, RTX 5090) are confirmed to work.
+> **Note**: Some datacenter GPUs (e.g. NVIDIA L4, A10G) are **not** in Pluralis's allowlist. Consumer GPUs (RTX 4090, RTX 5090) and L40S are expected to work. Check the [Pluralis Dashboard](https://agora.pluralis.ai/) for the latest supported GPU list.
 
 ## Scripts
 

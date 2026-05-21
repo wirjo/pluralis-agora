@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Launch a g6.8xlarge (NVIDIA L4, 24GB VRAM) EC2 instance for Pluralis Agora.
+# Launch an EC2 GPU instance for Pluralis Agora (default: g6e.12xlarge / NVIDIA L40S, 48GB VRAM).
 # Prerequisites: AWS CLI configured, appropriate IAM permissions.
 #
 # Usage: ./scripts/launch-ec2.sh [INSTANCE_COUNT]
@@ -7,7 +7,7 @@
 
 set -euo pipefail
 
-INSTANCE_TYPE="g6.8xlarge"
+INSTANCE_TYPE="${AGORA_INSTANCE_TYPE:-g6e.12xlarge}"
 INSTANCE_COUNT="${1:-1}"
 AMI_ID=""  # Will auto-detect Deep Learning AMI
 KEY_NAME="${AGORA_KEY_NAME:-agora-node}"
@@ -17,7 +17,7 @@ REGION="${AWS_DEFAULT_REGION:-ap-southeast-2}"
 HF_TOKEN="${AGORA_HF_TOKEN:?Set AGORA_HF_TOKEN to your HuggingFace token}"
 
 echo "=== Pluralis Agora EC2 Launcher ==="
-echo "Instance type: $INSTANCE_TYPE (NVIDIA L4, 24GB VRAM)"
+echo "Instance type: $INSTANCE_TYPE"
 echo "Count: $INSTANCE_COUNT"
 echo "Region: $REGION"
 echo ""
